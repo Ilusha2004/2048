@@ -1,4 +1,6 @@
 import random
+import pygame
+from Pallete import chooseColor
 
 class Field:
 
@@ -36,6 +38,30 @@ class Field:
             for b in line:
                 print(b, end = ' ')
             print()
+
+    # def DrawField(self, field, screen, font):
+    #     PosX : int = 0
+    #     PosY : int = 0
+
+    #     for line in field.getField():
+    #         for item in line:
+    #             pygame.draw.rect(screen, chooseColor(item).value,
+    #                             (125 * PosX + 5, 125 * PosY + 5, 120, 120),
+    #                             0, 20)
+
+    #             if item != 0 and PosY == 0 and PosX == 0:
+    #                 screen.blit(font.render(str(item), True,
+    #                                         (255, 255, 255)),
+    #                             (135 * PosX + 20, 135 * PosY + 5))
+
+    #             elif item != 0:
+    #                 screen.blit(font.render(str(item), True,
+    #                                         (255, 255, 255)),
+    #                             (135 * PosX + 20, 135 * PosY + 5))
+
+    #             PosX += 1
+    #         PosY += 1
+    #         PosX = 0
 
     def getField(self):
         return self.field
